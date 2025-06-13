@@ -21,7 +21,7 @@ This project features React hooks (`useState`, `useEffect`, `useRef`), functiona
 
 ![Tenzies Game Screenshot](https://via.placeholder.com/800x400.png?text=Tenzies+Game+Preview)
 
-> Replace the above URL with an actual screenshot once hosted.
+
 
 ---
 
@@ -39,7 +39,7 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/tenzies-game.git
+   git clone https://github.com/carolinafrederico/tenzies-game.git
    cd tenzies-game
 
 2. **Install dependencies:**
@@ -48,70 +48,44 @@ npm install
 3. **Run the development server:**
 npm run dev
 
-**How to Play**
+## 🧠 How to Play
 
-    Click Roll to roll all 10 dice.
+1. Click **Roll** to roll all 10 dice.
+2. Click any die to **hold** its current number.
+3. Keep rolling until **all 10 dice show the same number**.
+4. When you win:
+   - 🎉 Confetti will fall  
+   - 🚀 A **"New Game"** button appears, focused automatically  
+   - 🧮 Your roll count is displayed  
 
-    Click any die to hold its current number.
+---
 
-    Keep rolling until all 10 dice show the same number.
+## 🔧 Technologies Used
 
-    When you win:
+- **React** – for UI components and state management  
+- **Vite** – for fast development server and build tool  
+- **NanoID** – for generating unique IDs for each die  
+- **React Confetti** – for win animation  
+- **CSS** – for layout and visual styles  
 
-        🎉 Confetti will fall
+---
 
-        🚀 A "New Game" button appears, focused automatically
+## 🧪 React Concepts Used
 
-        🧮 Your roll count is displayed
+- `useState` – to track dice state and roll count  
+- `useEffect` – to handle game-winning conditions  
+- `useRef` – to focus the button upon winning  
+- Functional components & props  
+- JSX event handling and styling  
 
+---
 
-🔧 Technologies Used
+## 📦 Dependencies
 
-    React – for UI components and state management
-
-    Vite – for fast development server and build tool
-
-    NanoID – for generating unique IDs for each die
-
-    React Confetti – for win animation
-
-    CSS – for layout and visual styles
-
-🧪 React Concepts Used
-
-    useState – to track dice state and roll count
-
-    useEffect – to handle game-winning conditions
-
-    useRef – to focus the button upon winning
-
-    Functional components & props
-
-    JSX event handling and styling
-
-📦 Dependencies
-
+```json
 {
   "react": "^18.0.0",
   "react-dom": "^18.0.0",
   "react-confetti": "^6.0.0",
   "nanoid": "^5.0.0"
 }
-
-🛠 Possible Future Enhancements
-
-    Add a timer to track how fast the player wins
-
-    Track best scores (lowest roll count)
-
-    Sound effects on win/roll
-
-    Persistent score tracking with localStorage
-
-    Dice face images instead of numbers
-
-🧑‍💻 Author
-
-Carolina – @carolinafrederico
-
-Feel free to fork and contribute to this project!

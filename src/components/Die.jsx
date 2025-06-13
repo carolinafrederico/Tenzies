@@ -1,18 +1,12 @@
-import React from "react"
-import "../index.css"
-
-export default function Die({ value, isHeld, holdDie }) {
+export default function Die(props) {
     const styles = {
-        backgroundColor: isHeld ? "#59E391" : "white"
+        backgroundColor: props.isHeld ? "#59E391" : "white"
     }
-
+    
     return (
         <button 
-            className="die" 
-            style={styles} 
-            onClick={holdDie}  // ✅ Call the function passed from App
-        >
-            {value}
-        </button>
+            style={styles}
+            onClick={props.hold}
+        >{props.value}</button>
     )
 }

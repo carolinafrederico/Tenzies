@@ -20,18 +20,22 @@ export default function App() {
         setDice(generateAllNewDice())
     }
 
-    // ✅ Step 1: Log the clicked die’s id
-    function holdDie(id) {
-        console.log("Clicked die with id:", id)
+    function hold(id) {
+        setDice(oldDice => {
+            return oldDice.map(die => {
+                return die.id === id ?
+                    {...die, isHeld: !die.isHeld} :
+                    die
+            })
+        })
     }
 
-    // ✅ Step 2: Pass holdDie to each Die
     const diceElements = dice.map(dieObj => (
-        <Die 
+        <Die
             key={dieObj.id}
             value={dieObj.value}
             isHeld={dieObj.isHeld}
-            holdDie={() => holdDie(dieObj.id)}
+            hold={() => hold(dieObj.id)}
         />
     ))
 
